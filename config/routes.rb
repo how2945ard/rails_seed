@@ -4,5 +4,5 @@ Rails.application.routes.draw do
   end
   devise_for :users, :controllers => { :omniauth_callbacks => "callbacks" }
   root 'index#index'
-
+  get '/apple' => 'index#apple'
 end
