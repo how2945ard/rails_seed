@@ -20,7 +20,7 @@ class User < ActiveRecord::Base
       if registered_user
         return registered_user
       else
-        user = User.create(name:auth.extra.raw_info.name,
+        user = User.new(name:auth.extra.raw_info.name,
                            provider:auth.provider,
                            uid:auth.uid,
                            email:auth.info.email,
@@ -38,7 +38,7 @@ class User < ActiveRecord::Base
       if registered_user
         return registered_user
       else
-        user = User.create(name:auth.extra.raw_info.name,
+        user = User.new(name:auth.extra.raw_info.name,
                            provider:auth.provider,
                            uid:auth.uid,
                            email:auth.info.email,
