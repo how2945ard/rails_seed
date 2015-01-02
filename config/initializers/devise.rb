@@ -11,6 +11,7 @@ Devise.setup do |config|
   # note that it will be overwritten if you use your own mailer class
   # with default "from" parameter.
   config.mailer_sender = 'service@maker-diwo.com'
+  config.confirm_within = 1.days
 
   # Configure the class responsible to send e-mails.
   # config.mailer = 'Devise::Mailer'
